@@ -513,10 +513,10 @@ strong {
     .modal {    
       position: fixed;
       left: 50%;
-      top: 45%;
+      top: 50%;
       z-index: 1000;
-      padding: 40px 25px;
-      width: 80vw;
+      padding: 30px 25px;
+      width: 90vw;
     }
 
  .modal .jp-txt {
