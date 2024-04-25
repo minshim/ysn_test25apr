@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>YSN yashironi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+    
+
+
+
+        <div class="intro">
+               <div class=title-container>
+                   <p class=title>THINKING ABOUT KIMONO<br>THROUGH TECHNOLOGY, DESIGN AND ART</p>
+                   <p class=title-jp>着物を考えるための調べ物の記録</p> 
+                </div> 
+<!-- 
+               <div class=title-container>
+                   <p class=title>THINKING ABOUT KIMONO THROUGH TECHNOLOGY, DESIGN AND ART</p>
+                   <p class=title-jp>　着物を考えるための調べ物の記録</p>
+                </div>  -->
+
+
+                <!-- <p class=title>Thinking<br>about Kimono <br>through Technology,<br>Design and Art</p> -->
+           
+        </div>
+     
+        </div>
+
+    <div class="flex">
+    
+        <!-- *** yearly *** -->
+
+        <div id="calendar-container-year" class="calendar-container-year">
+        <div class="calendar-item-year">
+            <p class="year">2024</h1></div>
+       
+  
+         
+        </div>
+        
+    
+
+    </div>
+
+
+
+      <img class="ysn_logo" src="img/ysn_g.svg">
+      <div class="marquee_container">
+            <div class="marquee_container">
+                    <div class="marquee">
+                        <div class="track" >
+                            <div class="content" >
+                                <span class="marquee-jp">&nbsp;本サイトは、創業<strong>1720</strong>年の着物メーカー問屋「矢代仁」が、<strong>350</strong>周年に向けてスタートしたプロジェクト<strong>YSN</strong>の記録です。</span>
+                                <span class="marquee-eng">This website is a record of the project <strong>YSN</strong>, initiated by the kimono manufacturer wholesaler YASHIRONI, which has been in business for <strong>1720</strong> years and is celebrating its <strong>350</strong>th anniversary.</span>
+                                <span class="marquee-jp">&nbsp;本サイトは、創業<strong>1720</strong> 年の着物メーカー問屋「矢代仁」が、<strong>350</strong>周年に向けてスタートしたプロジェクト<strong>YSN</strong>の記録です。</span>
+                                <span class="marquee-eng">This website is a record of the project <strong>YSN</strong>, initiated by the kimono manufacturer wholesaler YASHIRONI, which has been in business for <strong>1720</strong>  years and is celebrating its <strong>350</strong>th anniversary.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+</div>
+
+
+<footer>
+
+    <div class="footer_container">
+
+<div class="footer_clock">
+        <div id="clock"></div>
+        <div id="timezone"></div>
+    </div>
+
+    <div class="footer_ysn">
+       Copyright 2024 by Yashironi</div>
+   
+
+    <div class="footer_update">
+          last update April 30 2024</div>
+     </div>
+
+</footer>
+    
+
+<div class="logo-container">
+    <div class="logo-wrapper">
+        <img class="logo_A" src="img/yukkuri_g.svg" alt="yukkuri">
+        <img class="logo_B" src="img/shikkari_g.svg" alt="shikkari">
+        <img class="logo_C" src="img/nokosu_g.svg" alt="nokosu">
+    </div>
+</div>
+
+  
+
+      <script 
+src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.0.2/luxon.min.js"></script>
+      <script>
+
+
+
+//clock----------------------------------------------------
+        function updateTime() {
+          var now = luxon.DateTime.local();
+          var hours = now.hour;
+          var minutes = now.minute;
+          var seconds = now.second;
+          var timezone = now.zoneName;
+          var clockElement = document.getElementById('clock');
+          var timezoneElement = document.getElementById('timezone');
+          
+          // 時間を表示
+          clockElement.textContent = formatTime(hours) + ':' + formatTime(minutes);
+          
+          // タイムゾーンを表示
+          timezoneElement.textContent = "(" + timezone + ")";;
+        }
+
+        function formatTime(time) {
+          return (time < 10) ? '0' + time : time;
+        }
+    
+        // 初回の呼び出し
+        updateTime();
+    
+        // 1秒ごとに更新
+        setInterval(updateTime, 1000);
+
+
+
+
+
+
+//logo--------------------------------------------------------------------
+
+// スクロールに応じて要素を緩やかにスイングさせる関数
+// スクロールに応じて要素を緩やかにスイングさせる関数
+function swingOnScroll() {
+  const scrollTop = window.scrollY;
+  const swingElementA = document.querySelector('.logo_A');
+  const swingElementB = document.querySelector('.logo_B');
+  const swingElementC = document.querySelector('.logo_C');
+  const maxRotationA = 60; // logo_A の最大回転角度（度）
+  const maxRotationB = 320; // logo_B の最大回転角度（度）
+  const maxRotationC = 500; // logo_C の最大回転角度（度）
+  const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+  let rotationA = (scrollTop / scrollHeight) * maxRotationA; // スクロール位置に応じた回転角度
+  let rotationB = (scrollTop / scrollHeight) * maxRotationB; // スクロール位置に応じた回転角度
+  let rotationC = (scrollTop / scrollHeight) * maxRotationC; // スクロール位置に応じた回転角度
+
+  // 速度を調整
+  rotationA *= 0.5; // 0.5倍の速度にする
+  rotationB *= 0.9; // 0.9倍の速度にする
+  rotationC *= 0.8; // 0.8倍の速度にする
+
+  // 回転角度を適用
+  swingElementA.style.transform = `rotate(${rotationA}deg)`;
+  swingElementB.style.transform = `rotate(${rotationB}deg)`;
+  swingElementC.style.transform = `rotate(${rotationC}deg)`;
+}
+
+// ロゴ要素がクリックされた時の処理を関数化
+function hideLogoOnClick(logoElement) {
+  logoElement.style.transition = 'opacity 0.2s'; // 1秒かけて消えるトランジションを追加
+  logoElement.style.opacity = '0'; // 透明度を0に設定
+  setTimeout(function() {
+    logoElement.style.display = 'none'; // 非表示にする
+  }, 1000); // 1秒後に非表示にする
+}
+
+// logo_Aをクリックした時の処理
+document.querySelector('.logo_A').addEventListener('click', function() {
+  hideLogoOnClick(this);
+});
+
+// logo_Bをクリックした時の処理
+document.querySelector('.logo_B').addEventListener('click', function() {
+  hideLogoOnClick(this);
+});
+
+// logo_Cをクリックした時の処理
+document.querySelector('.logo_C').addEventListener('click', function() {
+  hideLogoOnClick(this);
+});
+
+// スクロールイベントリスナーを追加
+window.addEventListener('scroll', swingOnScroll);
+
+
+
+
+// alert--------------------------------------------------------------
+
+// 英語と日本語のアラートメッセージ
+ // Get the modal element
+ var modal = document.getElementById("myModal");
+
+// Get the close button
+var closeBtn = document.getElementsByClassName("close")[0];
+
+// When the page loads, display the modal
+window.addEventListener('load', function() {
+  modal.style.display = "block";
+});
+
+// When the user clicks on the close button, close the modal
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+    // JavaScriptを使用してmarqueeの幅を変更する関数
+    function changeMarqueeWidth(width) {
+        var marquee = document.querySelector('.marquee');
+        marquee.style.width = width + 'px';
+    }
+
+    // ページ読み込み時にmarqueeの幅を変更する
+    window.onload = function() {
+        // 任意の幅を指定
+        var newWidth = 300;
+        changeMarqueeWidth(newWidth);
+    };
+
+
+
+</script>
+</body>
+</html>
+
