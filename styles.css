@@ -422,7 +422,7 @@ strong {
   justify-content: center;
   align-items: center;
   width: 300px;
-
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 720px) {
@@ -432,7 +432,7 @@ strong {
       left: 15px;
       bottom:35px;
       width: 50px;
-      
+
       }
 
 
@@ -441,12 +441,12 @@ strong {
       flex-direction: column;
       height: 220px; 
       gap: 12px; 
-    
+      justify-content: center;
       }
 
       .footer_clock, .footer_ysn, .footer_update {
         display: flex;
-
+       
       }
   
   } 
