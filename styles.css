@@ -10,12 +10,12 @@
 
 body {
   font-family: Hershey-Futural-30;
- background-color:var(--a2);}
+  background-color:var(--a2);}
 
 
 
 body, html {
-  font-size: 18px
+  font-size: 15px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -30,6 +30,7 @@ body, html {
 }
 
 :root {
+  --letterspace02: 0.2px;
   --letterspace05: 0.5px;
   --letterspace08: 0.8px;
   --lh-jp: 1.3rem;
@@ -37,8 +38,8 @@ body, html {
   --fontsize-main-jp: 15px;
   --a1: white;
   --a2: #fff9bf;
-  --a3: silver;
-  --a4: darkgray;
+  --a3: rgb(148, 148, 148);
+  --a4: silver;
   --a5: #0fd14c;
   --a6: #000;
   --a7: #fffdef;
@@ -65,12 +66,13 @@ body, html {
 
 .title-jp {
   color: var(--a3);
-  font-size: 20px;
+  font-size: 18px;
   /* text-align: center; */
   margin-left: 18px;
-  padding-top: 10px;
   margin-bottom: 4px;
-  font-family:"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  padding-top: 10px;
+  font-family: 'A+EqpB-游ゴシック体 Pr6N M', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  font-weight: normal;
   display: inline-block;
   vertical-align: sub;
   
@@ -79,19 +81,30 @@ body, html {
 .title-eng {
   display: absolute;
   color: var(--a3);
-  font-size: 23px;
+  font-size: 19px;
   margin-left: 20px;
   margin-bottom: 10px;
   text-wrap: balance;
-  letter-spacing: var(--letterspace05);
+  letter-spacing: var(--letterspace02);
   display: inline-block;
 }
 
+@media only screen and (max-width: 420px) {
 
-mark{
-  color: var(--a3);
-  background-color: white;
+  .title-jp {
+    font-size: 15px;
+    
+  }
+
+  .title-eng {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+  
 }
+
+
+
 
 .title-container {
   display: inline-block;
@@ -192,6 +205,8 @@ mark{
   color: var(--a3);
 }
 
+
+
 .yearly-container {
 width: 100vw;
 }
@@ -205,7 +220,8 @@ width: 100vw;
 
 .jp-txt {
   font-size: var(--fontsize-main-jp);
-  font-family:"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  font-family: 'A+EqpB-游ゴシック体 Pr6N M', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  font-weight: normal;
   letter-spacing: var(--letterspace05);
   line-height: var(--lh-jp);
 }
@@ -213,7 +229,7 @@ width: 100vw;
 
 
 .eng-txt {
-letter-spacing: var(--letterspace05);
+letter-spacing: var(--letterspace02);
 line-height: var(--lh-eng);
 }
 
@@ -350,9 +366,9 @@ line-height: var(--lh-eng);
   height: 20px;
   overflow-x: hidden;
   font-size: 13px;
-  color: var(--a6);
+  color: var(--a3);
   white-space: nowrap;
-  letter-spacing: var(--letterspace05);
+  letter-spacing: var(--letterspace02);
 }
 
 .track {
@@ -387,16 +403,16 @@ strong {
 
  
  footer {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--a3);
-  letter-spacing: var(--letterspace05);
+  letter-spacing: var(--letterspace02);
 
  }
  .footer_container {
   display: flex;
   align-items: center;
   max-width: 1200px;
-  gap: 12px;
+  gap:5px;
   height: 200px;  
  margin: 0 auto;
 }
@@ -405,7 +421,8 @@ strong {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  width: 300px;
+
 }
 
 @media only screen and (max-width: 720px) {
@@ -415,18 +432,21 @@ strong {
       left: 15px;
       bottom:35px;
       width: 50px;
+      
       }
 
 
       .footer_container  {
-      margin-top:55px;
+        margin-top: 105px;
       flex-direction: column;
-      gap: 10px;
-      height: 200px;  
+      height: 220px; 
+      gap: 12px; 
+    
       }
+
       .footer_clock, .footer_ysn, .footer_update {
-      padding: 0px;
-      text-align: left;
+        display: flex;
+
       }
   
   } 
@@ -448,7 +468,6 @@ strong {
   width: 490px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   color: var(--a1);
-  text-wrap: balance;
   margin: 0;
 }
 
@@ -513,9 +532,9 @@ strong {
     .modal {    
       position: fixed;
       left: 50%;
-      top: 50%;
+      top: 45%;
       z-index: 1000;
-      padding: 30px 25px;
+      padding: 25px 25px;
       width: 90vw;
     }
 
@@ -527,7 +546,7 @@ strong {
 
 
 .modal .eng-txt {
-  letter-spacing: -0.3px;
+  letter-spacing: var(--letterspace02);
   line-height: 1.3rem;
   }
 
@@ -536,7 +555,14 @@ strong {
   }
 
   .modal-active {
-    font-size: 18px;
+    font-size: 17px;
+  }
+
+  .modal a:link, a:visited, a:active {
+    color: white;
+    border-bottom: solid;
+    border-width: 1.5px;
+    border-color: white;
   }
 
 
