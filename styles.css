@@ -71,7 +71,7 @@ body, html {
   margin-left: 18px;
   margin-bottom: 4px;
   padding-top: 10px;
-  font-family: 'A+EqpB-游ゴシック体 Pr6N M', sans-serif;
+  font-family: 'A+EqpB-游ゴシック体 Pr6N M';
   font-weight: normal;
   display: inline-block;
   vertical-align: sub;
@@ -222,7 +222,7 @@ width: 100vw;
 
 .jp-txt {
   font-size: var(--fontsize-main-jp);
-  font-family: 'A+EqpB-游ゴシック体 Pr6N M', sans-serif;
+  font-family: 'A+EqpB-游ゴシック体 Pr6N M';
   font-weight: normal;
   letter-spacing: var(--letterspace05);
   line-height: var(--lh-jp);
@@ -541,6 +541,7 @@ strong {
     }
 
  .modal .jp-txt {
+    font-family: 'A+EqpB-游ゴシック体 Pr6N M';
       font-size: 14px;
       line-height: 1.1rem;
     }
