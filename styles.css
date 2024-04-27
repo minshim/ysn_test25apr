@@ -71,7 +71,7 @@ body, html {
   margin-left: 18px;
   margin-bottom: 4px;
   padding-top: 10px;
-  font-family: 'A+EqpB-游ゴシック体 Pr6N M', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  font-family: 'A+EqpB-游ゴシック体 Pr6N M', "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: normal;
   display: inline-block;
   vertical-align: sub;
@@ -218,9 +218,11 @@ width: 100vw;
   left: 20px;
 }
 
+
+
 .jp-txt {
   font-size: var(--fontsize-main-jp);
-  font-family: 'A+EqpB-游ゴシック体 Pr6N M', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  font-family: 'A+EqpB-游ゴシック体 Pr6N M', "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: normal;
   letter-spacing: var(--letterspace05);
   line-height: var(--lh-jp);
