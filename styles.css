@@ -222,7 +222,7 @@ width: 100vw;
 
 .jp-txt {
   font-size: var(--fontsize-main-jp);
-  font-family: 'A+EqpB-游ゴシック体 Pr6N M';
+  font-family: 'A+EqpB-游ゴシック体 Pr6N M',sans-serif;
   font-weight: normal;
   letter-spacing: var(--letterspace05);
   line-height: var(--lh-jp);
