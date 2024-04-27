@@ -1,8 +1,4 @@
-@font-face {
-  font-family: 'A+EqpB-游ゴシック体 Pr6N M';
-}
 
-  
 @font-face {
   font-family: Hershey-Futural-30;
   src: url(/test2/font/Hershey-Futural-30.woff) format("woff"),url(/test2/font/Hershey-Futural-30.ttf) format("truetype")
@@ -13,7 +9,7 @@
 }
 
 body {
-  font-family: Hershey-Futural-30;
+  font-family: Hershey-Futural-30,Hershey-Futural--15,'A+EqpB-游ゴシック体 Pr6N M',Yu Gothic,'游ゴシック',YuGothic,'游ゴシック体',-apple-system,BlinkMacSystemFont,Hiragino Sans,Hiragino Kaku Gothic ProN,meiryo,sans-serif;
   background-color:var(--a2);}
 
 
