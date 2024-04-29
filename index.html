@@ -1,65 +1,41 @@
 <!DOCTYPE html>
 <html lang="en jp">
 <head>
-    <title>YSN yashironi</title>
+    <title>YSN YASHIRONI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
-  
-
 </head>
 <body>
-    
 
+<!-- header -->
+<div class="header">
+    <div class=title-container>
+        <span class=title-jp>記録：着物を考えるための調べ物</span>
+        </br><span class=title-eng>Thinking about Kimono through Technology, Design and Art</span> 
+        <span id=refreshed>Refreshed: April 30 2024</span> 
+    </div> 
+</div>
 
+<!-- calendar -->
 
-        <div class="intro">
-               <div class=title-container>
-                    <span class=title-jp>記録：着物を考えるための調べ物</span>
-               </br><span class=title-eng>Thinking about Kimono through Technology, Design and Art</span> 
-               
-                </div> 
-
-        </div>
-     
-        </div>
-
-    <div class="flex">
-    
-        <!-- *** calendar *** -->
-
-        <div id="calendar-container" class="calendar-container">
+<div class="flex">
+    <div id="calendar-container" class="calendar-container">
         <div class="calendar-item">
-                
-                <!-- <a href="2024.html" ><img src="img/b.png" ></a> -->
-
             <h1 class="year">2024</h1>
-      <div class="txtbox">
-                       
-            <span class="text-container eng-txt">
-            ==>
-        </span>
-            <span class="text-container jp-txt">
-                    展示</span>
-                    <span class="text-container eng-txt">
-                            Exhibition 5.1 - 5.12
-                    </span>
-                    <div class="text-container jp-txt">
-                        <br> はかる：着物を3Dスキャン／ひもとく：江戸の柄をいまの目線で／うごく：写真でとらえる着物の動き  <br> <br> 
-            </div>
-            <div class="text-container eng-txt">
+                <div class="txtbox">
+                <span class="eng-txt">==></span><span class="jp-txt">展示</span>
+                <span class="eng-txt">Exhibition  5.1 - 5.12</span>
+                <div class="text-container jp-txt">
+                        <br>はかる：着物を3Dスキャン／ひもとく：江戸の柄をいまの目線で／うごく：写真でとらえる着物の動き </div>
+                <div class="text-container eng-txt">
                 Measure: 3D Scanning of Kimono, Open Book: Edo Patterns from the Perspective of Today, Capture: Kimono Movements Captured in Photographs<br><br>
-                   </div>
-                   <div class="text-container eng-txt">
-                        (more information will be available soon)  <br> <br> 
-                       </div>
-
-        </div>
-
-        
-           
-         
-        </div>
+                </div>
+                <div class="text-container eng-txt">
+                (more information will be available soon)  <br> <br> 
+                </div>
+    </div>
+</div>
         
         
         <div class="calendar-item">
@@ -124,23 +100,22 @@
 
 <footer>
 
-    <div class="footer_container">
-
-<div class="footer_clock">
-        <div id="date"></div> &ensp;
-        <div id="clock"></div>
-        <div id="timezone"></div>
-    </div>
+<div class="footer_container">
 
     <div class="footer_ysn">
-       Copyright 2024 by Yashironi</div>
-   
-
-    <div class="footer_update">
-        Refreshed on: April 30 2024</div>
-     </div>
-
+  YASHIRONI Since 1720</div>
+   <div class="footer_clock">
+        <div id="date"></div>&ensp;<div id="clock"></div><div id="timezone"></div>
+    </div>
+   <div class="footer_ysn">
+         <p id="result"></p></div>
 </footer>
+
+    <!-- <div class="footer_update">
+        Refreshed on: April 30 2024</div>
+     </div> -->
+
+
     
 
 <div class="logo-container">
@@ -159,8 +134,7 @@
                         展示会開催のお知らせ</p>
                         <p class="info eng-txt">
                                 
-                            YSN 2024 Exhibition<br>5.1(wed) - 5.12(sun)
-                            11am-6pm  <br>
+                            YSN 2024 Exhibition<br>5.1 Wed. - 5.12 Sun.                             11a.m. - 6p.m.  <br>
                             Open everyday, Entrance free
                 </p>
                 <span class="info eng-txt"> 
@@ -168,7 +142,7 @@
                     </span>
                         <span class="info jp-txt"> 
                         5月1日 11時から12時まで、プロジェクトチームによるギャラリーツアーを開催します</span><span class="info eng-txt"> 
-Gallery tour on May 1,  11am-12pm (Language: Japanese)<br><br>
+Gallery tour on 5.1, 11a.m. - 12p.m. (Language: Japanese)<br><br>
             </span>
         
             <p class="eng-txt"> at Gallery SUGATA </p>
@@ -183,46 +157,72 @@ Gallery tour on May 1,  11am-12pm (Language: Japanese)<br><br>
 
 
 
-      <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
-        <script src="https://font.realtype.jp/api/script/v4" data-rt-user ="dLfdL0Jy5EDoyhn2SP6Cb6ChYsG01W97"></script>
-      <script>
-
-        var timeZoneAbbreviations = {
-          "Europe/Berlin": "CET",
-        };
-    
-        function updateTime() {
-          var now = luxon.DateTime.local();
-          var hours = now.hour;
-          var minutes = now.minute;
-          var seconds = now.second;
-          var date = now.toFormat('LLLL dd yyyy'); // fmt 
-          var timezone = now.zoneName;
-          var clockElement = document.getElementById('clock');
-          var dateElement = document.getElementById('date');
-          var timezoneElement = document.getElementById('timezone');
-    
-          var timeString = formatTime(hours) + ':' + formatTime(minutes) + ':' + formatTime(seconds) ;
-    
-          clockElement.textContent = timeString;
-          dateElement.textContent = date;
-    
-          var timeZoneAbbreviation = timeZoneAbbreviations[timezone] || timezone;
-          
-          timezoneElement.textContent = "(" + timeZoneAbbreviation + ")";
-        }
-    
-        updateTime();
-    
-        setInterval(updateTime, 1000);
-    
-        function formatTime(time) {
-          return (time < 10) ? '0' + time : time;
-        }
+      <script src="https://cdn.jsdelivr.net/npm/luxon@2.1.1/build/global/luxon.min.js"></script>
+  <script>
 
 
+      // ---------------------------------------------------------------clock
+function updateTime() {
+  var now = luxon.DateTime.local();
+  var hours = now.hour;
+  var minutes = now.minute;
+  var seconds = now.second;
+  var date = now.toFormat('LLLL dd yyyy'); // fmt 
+  var timezone = now.zoneName; // ブラウザのタイムゾーンを取得する
+  var clockElement = document.getElementById('clock');
+  var dateElement = document.getElementById('date');
+  var timezoneElement = document.getElementById('timezone');
+
+  var timeString = formatTime(hours) + ':' + formatTime(minutes) + ':' + formatTime(seconds) ;
+
+  clockElement.textContent = timeString;
+  dateElement.textContent = date;
+
+  var timeZoneAbbreviation = getTimeZoneAbbreviation(timezone); // タイムゾーンの略語を取得
+
+  timezoneElement.textContent = "(" + timeZoneAbbreviation + ")";
+}
+
+updateTime();
+
+setInterval(updateTime, 1000);
+
+function formatTime(time) {
+  return (time < 10) ? '0' + time : time;
+}
+
+function getTimeZoneAbbreviation(timezone) {
+  var timeZoneAbbreviations = {
+    "Asia/Tokyo": "JST", 
+    "Asia/Shanghai": "CST",
+    "Asia/Kolkata": "IST", 
+    "Asia/Bangkok": "ICT", 
+    "Asia/Dubai": "GST", 
+    "Asia/Seoul": "KST",
+    "Asia/Singapore": "SGT", 
+    "Asia/Taipei": "CST", 
+    "Asia/Hong_Kong": "HKT",
+    "America/Los_Angeles": "PST", 
+    "America/New_York": "EST", 
+    "Europe/London": "GMT",
+    "Europe/Paris": "CET",
+    "Europe/Berlin": "CET",
+
+  };
+  return timeZoneAbbreviations[timezone] || timezone;
+}
 
 
+// ---------------------------------------------------------------count
+
+    const startDate = new Date(1720, 12, 1); // 1720年12月1日
+    const today = new Date();
+    const timeDifference = today.getTime() - startDate.getTime();
+    const years = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 365)); // 年数
+    const days = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24)); // 日数
+    const resultElement = document.getElementById('result');
+    resultElement.textContent = years + " years + " + days + " days";
+  
 
 //logo rotation--------------------------------------------------------------------
 function swingOnScroll() {
@@ -274,28 +274,22 @@ window.addEventListener('scroll', swingOnScroll);
 
 
 // alert--------------------------------------------------------------
-
- // Get the modal element
- var modal = document.getElementById("myModal");
-
-// Get the close button
-var closeBtn = document.getElementsByClassName("close")[0];
-
 window.addEventListener('load', function() {
+  var modal = document.getElementById("myModal");
+  var closeBtn = document.getElementsByClassName("close")[0];
+
   modal.style.display = "block";
-});
 
-
-closeBtn.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
+  closeBtn.onclick = function() {
     modal.style.display = "none";
   }
-}
 
+  window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+});
     // width marquee
     function changeMarqueeWidth(width) {
         var marquee = document.querySelector('.marquee');
@@ -313,4 +307,3 @@ window.onclick = function(event) {
 </script>
 </body>
 </html>
-
