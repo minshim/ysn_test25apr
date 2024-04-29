@@ -14,7 +14,7 @@ body {
 }
 
 body, html {
-  font-size: 18px;
+  font-size: 14.5px;
   -webkit-text-size-adjust: 100%;
   font-weight: 300;
   color: var(--a3);
@@ -30,8 +30,8 @@ body, html {
   --letterspace01: 0.1px;
   --letterspace05: 0.5px;
   --letterspace08: 0.8px;
-  --lh-jp: 1rem;
-  --lh-eng: 1.1rem;
+  --lh-jp: 1.3rem;
+  --lh-eng: 1.2rem;
   --fontsize-main-jp: 15px;
   --a1: white;
   --a2: #fff9bf;
@@ -67,7 +67,7 @@ body, html {
   padding-top: 10px;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", -apple-system, BlinkMacSystemFont, Hiragino Sans, Hiragino Kaku Gothic ProN, meiryo,sans-serif;
   font-weight: 300;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
 }
 
@@ -77,7 +77,7 @@ body, html {
   margin-bottom: 10px;
   text-wrap: balance;
   letter-spacing: var(--letterspace01);
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.2rem;
 }
 
@@ -92,13 +92,14 @@ body, html {
 @media only screen and (max-width: 420px) {
 
   .title-jp {
-    padding-top: 20px;
-    font-size: 0.888rem;
+    padding-top: 22px;
+    font-size: 1.1rem;
   }
 
   .title-eng {
-    font-size: 0.9rem;
-    margin-bottom: 8px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    line-height: 1.3rem;
   }
 
   #refreshed {
@@ -176,24 +177,6 @@ body, html {
   cursor: normal;
   transition: 0.2s ease;
 }
- /* .calendar-item a img {
-  opacity: 0;
-  overflow: clip;
-  object-position: right top;
-  width: 100vw;
-  height: 100%;
-  object-fit: cover;
- }
-
- .calendar-item a:hover img:hover {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  max-height: 90%;
-  z-index: 1000; 
-  border-radius: 10px;
-} 
-*/
 
   .year {
   margin: 0px;
@@ -230,26 +213,26 @@ width: 100vw;
 .jp-txt {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", -apple-system, BlinkMacSystemFont, Hiragino Sans, Hiragino Kaku Gothic ProN, meiryo,sans-serif;
   letter-spacing: var(--letterspace05);
+  font-size: 1rem;
   line-height: var(--lh-jp);
-  font-size: 0.78rem;
 }
 
 .eng-txt {
 letter-spacing: var(--letterspace01);
 line-height: var(--lh-eng);
-font-size: 0.8rem;
+font-size: 1rem;
 }
 
 @media only screen and (max-width: 420px) {
   
 .jp-txt {
 
-  line-height: var(--lh-jp);
+
 }
 
 .eng-txt {
-  font-size: 0.77rem;
-  line-height: 1rem;
+  font-size: 1rem;
+
   }
 }
 
@@ -388,7 +371,7 @@ font-size: 0.8rem;
   /* width: 900px; */
   height: 20px;
   overflow-x: hidden;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   white-space: nowrap;
   letter-spacing: var(--letterspace01);
 }
@@ -403,7 +386,7 @@ font-size: 0.8rem;
 
 strong {
   font-family: var(--HF15),Arial,sans-serif;
-  font-size:var(--fontsize-main-jp);
+  font-size:1rem;
 }
 
 
@@ -425,7 +408,7 @@ strong {
 
  
  footer {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: var(--letterspace02);
 
  }
@@ -543,7 +526,7 @@ strong {
   @media only screen and (max-width: 420px) {
 
     .announcement {
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 2px;
     }
 
@@ -559,13 +542,13 @@ strong {
     .modal .jp-txt {
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", -apple-system, BlinkMacSystemFont, Hiragino Sans, Hiragino Kaku Gothic ProN, meiryo, sans-serif;
 
-    line-height: var(--lh-jp);
+
     }
 
     .modal .eng-txt {
     letter-spacing: var(--letterspace01);
-    font-size: 0.77rem;
-    line-height: 1rem;
+    font-size: 1rem;
+ 
     }
 
 
