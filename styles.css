@@ -30,7 +30,7 @@ body, html {
   --letterspace01: 0.1px;
   --letterspace05: 0.5px;
   --letterspace08: 0.8px;
-  --lh-jp: 1.rem;
+  --lh-jp: 1rem;
   --lh-eng: 1.1rem;
   --fontsize-main-jp: 15px;
   --a1: white;
@@ -93,7 +93,7 @@ body, html {
 
   .title-jp {
     padding-top: 20px;
-    font-size: 0.85rem;
+    font-size: 0.88rem;
   }
 
   .title-eng {
@@ -243,8 +243,8 @@ font-size: 0.8rem;
 @media only screen and (max-width: 420px) {
   
 .jp-txt {
-  font-size: 0.733rem;
-  line-height: 1.1rem;
+  font-size: 0.75rem;
+  line-height: var(--lh-jp);
 }
 
 .eng-txt {
@@ -557,9 +557,9 @@ strong {
     }
 
     .modal .jp-txt {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", -apple-system, BlinkMacSystemFont, Hiragino Sans, Hiragino Kaku Gothic ProN, meiryo,sans-serif;
-    font-size: 0.733rem;
-    line-height: 1.1rem;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", -apple-system, BlinkMacSystemFont, Hiragino Sans, Hiragino Kaku Gothic ProN, meiryo, sans-serif;
+    font-size: 0.75rem;
+    line-height: var(--lh-jp);
     }
 
     .modal .eng-txt {
