@@ -141,7 +141,7 @@
                         *
                     </span>
                         <span class="info jp-txt"> 
-                        5月1日 11時から12時まで、プロジェクトチームによるギャラリーツアーを開催します</span><span class="info eng-txt"> 
+                        5月1日 11時から12時まで、プロジェクトチームによるギャラリーツアーを開催します<br></span><span class="info eng-txt"> 
 Gallery tour on 5.1, 11a.m. - 12p.m. (Language: Japanese)<br><br>
             </span>
         
@@ -290,13 +290,14 @@ window.addEventListener('load', function() {
     }
   });
 
-  // スマートフォン用のタッチイベントを追加
+  // touch event
   window.addEventListener('touchstart', function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
   });
 });
+
 
     // width marquee
     function changeMarqueeWidth(width) {
@@ -309,6 +310,7 @@ window.addEventListener('load', function() {
         var newWidth = 300;
         changeMarqueeWidth(newWidth);
     };
+    
 
 
 
