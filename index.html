@@ -288,13 +288,16 @@ window.addEventListener('load', function() {
     if (event.target == modal) {
       modal.style.display = "none";
     }
-   window.addEventListener('touchstart', function(event) {
+  });
+
+  // スマートフォン用のタッチイベントを追加
+  window.addEventListener('touchstart', function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
   });
-
 });
+
     // width marquee
     function changeMarqueeWidth(width) {
         var marquee = document.querySelector('.marquee');
