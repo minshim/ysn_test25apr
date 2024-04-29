@@ -9,19 +9,16 @@
 }
 
 body {
-  font-family: Hershey-Futural-30, 'A+EqpB-游ゴシック体 Pr6N M', sans-serif;
-  background-color:var(--a2);}
-
-
-
-body, html {
-  font-size: 15px;
-  -webkit-text-size-adjust: 100%;
+  font-family: Hershey-Futural-30, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", -apple-system, BlinkMacSystemFont, Hiragino Sans, Hiragino Kaku Gothic ProN, meiryo,sans-serif;
+  background-color:var(--a2);
 }
 
-
-
-/* testtesttest----------------------------  */
+body, html {
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+  font-weight: 300;
+  color: var(--a3);
+}
 
 *, :after, :before {
   margin:0; padding:0;
@@ -30,11 +27,11 @@ body, html {
 }
 
 :root {
-  --letterspace02: 0.2px;
+  --letterspace01: 0.1px;
   --letterspace05: 0.5px;
   --letterspace08: 0.8px;
-  --lh-jp: 1.3rem;
-  --lh-eng: 1.2rem;
+  --lh-jp: 1.rem;
+  --lh-eng: 1.1rem;
   --fontsize-main-jp: 15px;
   --a1: white;
   --a2: #fff9bf;
@@ -46,7 +43,6 @@ body, html {
 }
 
 
-
 .flex {
   height: 100%;
   width: 100vw;
@@ -54,9 +50,9 @@ body, html {
   /* text-align: center; */
 }
 
-.intro { 
+.header { 
   width: 100vw;
-  z-index: 10;
+  z-index: 100;
   background-color:var(--a2);
   position: -webkit-sticky;
   position: sticky;
@@ -65,42 +61,53 @@ body, html {
 }
 
 .title-jp {
-  color: var(--a3);
-  font-size: 18px;
-  /* text-align: center; */
-  margin-left: 18px;
+  display: inline-block;
+  margin-left: 19px;
   margin-bottom: 4px;
   padding-top: 10px;
-  font-family: 'A+EqpB-游ゴシック体 Pr6N M', sans-serif;
-  font-weight: normal;
-  display: inline-block;
-  vertical-align: sub;
-  
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", -apple-system, BlinkMacSystemFont, Hiragino Sans, Hiragino Kaku Gothic ProN, meiryo,sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.5rem;
 }
 
 .title-eng {
-  display: absolute;
-  color: var(--a3);
-  font-size: 19px;
+  display: inline-block;
   margin-left: 20px;
   margin-bottom: 10px;
   text-wrap: balance;
-  letter-spacing: var(--letterspace02);
-  display: inline-block;
+  letter-spacing: var(--letterspace01);
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+
+#refreshed {
+  position: fixed;
+  right: 5px;
+  top: 5px;
+  font-size: 0.65rem;
 }
 
 @media only screen and (max-width: 420px) {
 
   .title-jp {
-    font-size: 17px;
-    
+    padding-top: 20px;
+    font-size: 0.85rem;
   }
 
   .title-eng {
-    font-size: 18px;
+    font-size: 0.9rem;
     margin-bottom: 8px;
   }
-  
+
+  #refreshed {
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    font-size: 0.6rem;
+
+  }
 }
 
 
@@ -166,7 +173,7 @@ body, html {
 
 .calendar-item:hover{
   background-color: var(--a7);
-  cursor:pointer;
+  cursor: normal;
   transition: 0.2s ease;
 }
  /* .calendar-item a img {
@@ -189,7 +196,6 @@ body, html {
 */
 
   .year {
-  color: var(--a3);
   margin: 0px;
   position: absolute;
   top:15px;
@@ -197,12 +203,13 @@ body, html {
   font-family: Hershey-Futural--15,sans-serif;
   font-weight: 300;
   font-size:72px;
+  letter-spacing: -2px;
 }
 
 .text-container {
   position: relative;
   width:90%;
-  color: var(--a3);
+  
 }
 
 
@@ -221,19 +228,33 @@ width: 100vw;
 
 
 .jp-txt {
-  font-size: var(--fontsize-main-jp);
-  font-family: 'A+EqpB-游ゴシック体 Pr6N M',sans-serif;
-  font-weight: normal;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", -apple-system, BlinkMacSystemFont, Hiragino Sans, Hiragino Kaku Gothic ProN, meiryo,sans-serif;
   letter-spacing: var(--letterspace05);
   line-height: var(--lh-jp);
+  font-size: 0.78rem;
 }
-
-
 
 .eng-txt {
-letter-spacing: var(--letterspace02);
+letter-spacing: var(--letterspace01);
 line-height: var(--lh-eng);
+font-size: 0.8rem;
 }
+
+@media only screen and (max-width: 420px) {
+  
+.jp-txt {
+  font-size: 0.733rem;
+  line-height: 1.1rem;
+}
+
+.eng-txt {
+  font-size: 0.77rem;
+  line-height: 1rem;
+  }
+}
+
+
+
 
 
 /* calendar contents year ----------------------------  */
@@ -367,10 +388,9 @@ line-height: var(--lh-eng);
   /* width: 900px; */
   height: 20px;
   overflow-x: hidden;
-  font-size: 13px;
-  color: var(--a3);
+  font-size: 0.75rem;
   white-space: nowrap;
-  letter-spacing: var(--letterspace02);
+  letter-spacing: var(--letterspace01);
 }
 
 .track {
@@ -398,15 +418,14 @@ strong {
 
  .ysn_logo{
   position: fixed;
-  left: 25px;
-  bottom:60px;
-  width: 55px;
+  left: 18px;
+  bottom:48px;
+  width: 50px;
   }
 
  
  footer {
-  font-size: 12px;
-  color: var(--a3);
+  font-size: 0.75rem;
   letter-spacing: var(--letterspace02);
 
  }
@@ -434,10 +453,7 @@ strong {
       left: 15px;
       bottom:35px;
       width: 50px;
-
       }
-
-
       .footer_container  {
         margin-top: 105px;
       flex-direction: column;
@@ -446,9 +462,8 @@ strong {
       justify-content: center;
       }
 
-      .footer_clock, .footer_ysn, .footer_update {
-        display: flex;
-       
+      .footer_clock, .result, .footer_update {
+        display: flex;      
       }
   
   } 
@@ -492,7 +507,7 @@ strong {
 
 
 .modal .eng-text {
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .modal a:link, a:visited, a:active {
@@ -528,45 +543,45 @@ strong {
   @media only screen and (max-width: 420px) {
 
     .announcement {
-      font-size: 23px;
-      margin-bottom: 4px;
+    font-size: 1rem;
+    margin-bottom: 2px;
     }
+
     .modal {    
-      position: fixed;
-      left: 50%;
-      top: 45%;
-      z-index: 1000;
-      padding: 25px 25px;
-      width: 90vw;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    z-index: 1000;
+    padding: 25px 25px;
+    width: 90vw;
     }
 
- .modal .jp-txt {
-    font-family: 'A+EqpB-游ゴシック体 Pr6N M';
-      font-size: 14px;
-      line-height: 1.1rem;
+    .modal .jp-txt {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", -apple-system, BlinkMacSystemFont, Hiragino Sans, Hiragino Kaku Gothic ProN, meiryo,sans-serif;
+    font-size: 0.733rem;
+    line-height: 1.1rem;
+    }
+
+    .modal .eng-txt {
+    letter-spacing: var(--letterspace01);
+    font-size: 0.77rem;
+    line-height: 1rem;
     }
 
 
-
-.modal .eng-txt {
-  letter-spacing: var(--letterspace02);
-  line-height: 1.3rem;
-  }
-
-  .info {
+    .info {
     margin-bottom: 15px;
-  }
+    }
 
-  .modal-active {
-    font-size: 17px;
-  }
+    .modal-active {
+    font-size: 18px;
+    }
 
-  .modal a:link, a:visited, a:active {
+    .modal a:link, a:visited, a:active {
     color: white;
     border-bottom: solid;
     border-width: 1.5px;
     border-color: white;
-  }
-
+    }
 
     }
